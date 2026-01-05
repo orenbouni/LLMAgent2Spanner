@@ -66,7 +66,6 @@ To start the ADK web server and interact with the agent:
    ```bash
    cd agent
    ```
-
 2. Start the web server:
    ```bash
    adk web
