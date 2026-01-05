@@ -69,7 +69,6 @@ To start the ADK web server and interact with the agent:
 2. Start the web server:
    ```bash
    adk web
-   ```
 
 3. Open your browser to the URL shown (typically `http://localhost:8000`) to chat with the agent.
 
