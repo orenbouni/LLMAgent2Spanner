@@ -14,6 +14,10 @@ The system uses a hierarchical agent structure:
 - Python 3.11+
 - [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) (`gcloud`) installed and configured.
 - Access to a Google Cloud Spanner instance and a Vertex AI-enabled project.
+- Create a .env file with the following:
+      GOOGLE_GENAI_USE_VERTEXAI=true
+      GOOGLE_CLOUD_PROJECT=projID
+GOOGLE_CLOUD_LOCATION=region
 
 ## Setup Instructions
 
@@ -38,23 +42,9 @@ pip install -r requirements.txt
 
 Authenticate with Google Cloud so the agent can access Spanner and Vertex AI:
 
-```bash
-# Set application default credentials (ADC)
-gcloud auth application-default login
-
-# Set your project
-gcloud config set project YOUR_PROJECT_ID
-```
-
-### 4. Configuration
-
-Create a `.env` file in the root directory (based on the provided template if available) with the following variables:
-
-```env
 GOOGLE_GENAI_USE_VERTEXAI=true
 GOOGLE_CLOUD_PROJECT=your-project-id
 GOOGLE_CLOUD_LOCATION=your-region-id  # e.g., us-central1, me-west1
-```
 
 > **Configuration Note:** The Spanner instance ID and database ID are currently configured within the code at `agent/spanner_agnet/spanner_tools.py`. Please verify these match your environment.
 
