@@ -4,9 +4,6 @@ google-cloud-spanner
 networkx
 matplotlib
 spanner-graph-notebook
-networkx
-matplotlib
 ipysigma
-networkx
-networkx
-ipysigma
+fastapi
+uvicorn

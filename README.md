@@ -71,3 +71,14 @@ To start the ADK web server and interact with the agent:
     - `gql_agent.py`: The Graph/GQL specialist agent.
     - `spanner_tools.py`: Tools for interacting with Spanner.
 - `requirements.txt`: Python dependencies.
+
+## Custom UI
+
+To run the custom web interface:
+
+1. Ensure you are in the root directory.
+2. Run the FastAPI server:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+3. Open http://localhost:8000 in your browser.

@@ -114,6 +114,7 @@ def run_graph_query_viz(tool_context: ToolContext, query: str) -> str:
     # ipysigma save
     # Note: node_color, node_label, etc help style the graph
     test = Sigma.write_html(G, node_color="category", node_label="label", edge_label="label", height=600, path='./local_example.html')
+    #TODO: return the html path and visualize it in the UI
     # Return a relative path or a message
     # If the user is running `adk web`, we might want to return the absolute path or a link if we served it.
     # For now, return the path.
