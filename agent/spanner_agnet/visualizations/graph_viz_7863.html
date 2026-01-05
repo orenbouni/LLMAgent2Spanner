@@ -1,0 +1,53 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Spanner Graph Visualization</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style type="text/css">
+      #mynetwork {
+        width: 100%;
+        height: 600px;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Graph Query Result</h2>
+    <div id="mynetwork"></div>
+    <script type="text/javascript">
+      // create an array with nodes
+      var nodes = new vis.DataSet([{"id": "mUxvZ2lzdGljc0dyYXBoLldhcmVob3VzZXMAeJl3aC0wMDIAeA==", "label": "West Coast Gateway", "title": "{'LocationRegion': 'West', 'Name': 'West Coast Gateway', 'WarehouseId': 'wh-002'}", "group": "Warehouses", "color": "#FB7E81"}, {"id": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAxNgB4", "label": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAxNgB4", "title": "{'CustomerId': 'cust-019', 'EstimatedArrivalDate': '2025-12-06T00:43:05.171936Z', 'ShipmentDate': '2025-12-03T00:43:05.171936Z', 'ShipmentId': 'ship-0016', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}", "group": "Shipments", "color": "#FFFF00"}, {"id": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDE5AHg=", "label": "Sybil Miller", "title": "{'City': 'Austin', 'CustomerId': 'cust-019', 'Email': 'sybil.miller@example.com', 'Name': 'Sybil Miller'}", "group": "Customers", "color": "#7BE141"}, {"id": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAxOQB4", "label": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAxOQB4", "title": "{'CustomerId': 'cust-074', 'EstimatedArrivalDate': '2025-12-12T22:43:05.171950Z', 'ShipmentDate': '2025-12-10T22:43:05.171950Z', 'ShipmentId': 'ship-0019', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}", "group": "Shipments", "color": "#FFFF00"}, {"id": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDc0AHg=", "label": "Mallory Brown", "title": "{'City': 'Denver', 'CustomerId': 'cust-074', 'Email': 'mallory.brown@outlook.com', 'Name': 'Mallory Brown'}", "group": "Customers", "color": "#7BE141"}, {"id": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAyOAB4", "label": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAyOAB4", "title": "{'CustomerId': 'cust-059', 'EstimatedArrivalDate': '2025-12-13T04:43:05.171991Z', 'ShipmentDate': '2025-12-11T04:43:05.171991Z', 'ShipmentId': 'ship-0028', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}", "group": "Shipments", "color": "#FFFF00"}, {"id": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDU5AHg=", "label": "Olivia Taylor", "title": "{'City': 'Denver', 'CustomerId': 'cust-059', 'Email': 'olivia.taylor@yahoo.com', 'Name': 'Olivia Taylor'}", "group": "Customers", "color": "#7BE141"}, {"id": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAzNAB4", "label": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAzNAB4", "title": "{'CustomerId': 'cust-011', 'EstimatedArrivalDate': '2025-12-28T13:43:05.172015Z', 'ShipmentDate': '2025-12-23T13:43:05.172015Z', 'ShipmentId': 'ship-0034', 'Status': 'PROCESSING', 'WarehouseId': 'wh-002'}", "group": "Shipments", "color": "#FFFF00"}, {"id": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDExAHg=", "label": "Alice Wilson", "title": "{'City': 'Miami', 'CustomerId': 'cust-011', 'Email': 'alice.wilson@outlook.com', 'Name': 'Alice Wilson'}", "group": "Customers", "color": "#7BE141"}, {"id": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDA0MQB4", "label": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDA0MQB4", "title": "{'CustomerId': 'cust-083', 'EstimatedArrivalDate': '2026-01-03T17:43:05.172051Z', 'ShipmentDate': '2025-12-29T17:43:05.172051Z', 'ShipmentId': 'ship-0041', 'Status': 'CREATED', 'WarehouseId': 'wh-002'}", "group": "Shipments", "color": "#FFFF00"}, {"id": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDgzAHg=", "label": "Niaj Smith", "title": "{'City': 'Seattle', 'CustomerId': 'cust-083', 'Email': 'niaj.smith@hotmail.com', 'Name': 'Niaj Smith'}", "group": "Customers", "color": "#7BE141"}]);
+
+      // create an array with edges
+      var edges = new vis.DataSet([{"from": "mUxvZ2lzdGljc0dyYXBoLldhcmVob3VzZXMAeJl3aC0wMDIAeA==", "to": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAxNgB4", "label": "DISPATCHED", "arrows": "to", "title": "{'CustomerId': 'cust-019', 'EstimatedArrivalDate': '2025-12-06T00:43:05.171936Z', 'ShipmentDate': '2025-12-03T00:43:05.171936Z', 'ShipmentId': 'ship-0016', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAxNgB4", "to": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDE5AHg=", "label": "DELIVERED_TO", "arrows": "to", "title": "{'CustomerId': 'cust-019', 'EstimatedArrivalDate': '2025-12-06T00:43:05.171936Z', 'ShipmentDate': '2025-12-03T00:43:05.171936Z', 'ShipmentId': 'ship-0016', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLldhcmVob3VzZXMAeJl3aC0wMDIAeA==", "to": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAxOQB4", "label": "DISPATCHED", "arrows": "to", "title": "{'CustomerId': 'cust-074', 'EstimatedArrivalDate': '2025-12-12T22:43:05.171950Z', 'ShipmentDate': '2025-12-10T22:43:05.171950Z', 'ShipmentId': 'ship-0019', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAxOQB4", "to": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDc0AHg=", "label": "DELIVERED_TO", "arrows": "to", "title": "{'CustomerId': 'cust-074', 'EstimatedArrivalDate': '2025-12-12T22:43:05.171950Z', 'ShipmentDate': '2025-12-10T22:43:05.171950Z', 'ShipmentId': 'ship-0019', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLldhcmVob3VzZXMAeJl3aC0wMDIAeA==", "to": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAyOAB4", "label": "DISPATCHED", "arrows": "to", "title": "{'CustomerId': 'cust-059', 'EstimatedArrivalDate': '2025-12-13T04:43:05.171991Z', 'ShipmentDate': '2025-12-11T04:43:05.171991Z', 'ShipmentId': 'ship-0028', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAyOAB4", "to": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDU5AHg=", "label": "DELIVERED_TO", "arrows": "to", "title": "{'CustomerId': 'cust-059', 'EstimatedArrivalDate': '2025-12-13T04:43:05.171991Z', 'ShipmentDate': '2025-12-11T04:43:05.171991Z', 'ShipmentId': 'ship-0028', 'Status': 'RETURNED', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLldhcmVob3VzZXMAeJl3aC0wMDIAeA==", "to": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAzNAB4", "label": "DISPATCHED", "arrows": "to", "title": "{'CustomerId': 'cust-011', 'EstimatedArrivalDate': '2025-12-28T13:43:05.172015Z', 'ShipmentDate': '2025-12-23T13:43:05.172015Z', 'ShipmentId': 'ship-0034', 'Status': 'PROCESSING', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDAzNAB4", "to": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDExAHg=", "label": "DELIVERED_TO", "arrows": "to", "title": "{'CustomerId': 'cust-011', 'EstimatedArrivalDate': '2025-12-28T13:43:05.172015Z', 'ShipmentDate': '2025-12-23T13:43:05.172015Z', 'ShipmentId': 'ship-0034', 'Status': 'PROCESSING', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLldhcmVob3VzZXMAeJl3aC0wMDIAeA==", "to": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDA0MQB4", "label": "DISPATCHED", "arrows": "to", "title": "{'CustomerId': 'cust-083', 'EstimatedArrivalDate': '2026-01-03T17:43:05.172051Z', 'ShipmentDate': '2025-12-29T17:43:05.172051Z', 'ShipmentId': 'ship-0041', 'Status': 'CREATED', 'WarehouseId': 'wh-002'}"}, {"from": "mUxvZ2lzdGljc0dyYXBoLlNoaXBtZW50cwB4mXNoaXAtMDA0MQB4", "to": "mUxvZ2lzdGljc0dyYXBoLkN1c3RvbWVycwB4mWN1c3QtMDgzAHg=", "label": "DELIVERED_TO", "arrows": "to", "title": "{'CustomerId': 'cust-083', 'EstimatedArrivalDate': '2026-01-03T17:43:05.172051Z', 'ShipmentDate': '2025-12-29T17:43:05.172051Z', 'ShipmentId': 'ship-0041', 'Status': 'CREATED', 'WarehouseId': 'wh-002'}"}]);
+
+      // create a network
+      var container = document.getElementById('mynetwork');
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+      var options = {
+        nodes: {
+          shape: 'dot',
+          size: 16
+        },
+        physics: {
+          forceAtlas2Based: {
+            gravitationalConstant: -26,
+            centralGravity: 0.005,
+            springLength: 230,
+            springConstant: 0.18
+          },
+          maxVelocity: 146,
+          solver: 'forceAtlas2Based',
+          timestep: 0.35,
+          stabilization: {iterations: 150}
+        }
+      };
+      var network = new vis.Network(container, data, options);
+    </script>
+  </body>
+  </html>
+  

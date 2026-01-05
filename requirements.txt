@@ -1,0 +1,12 @@
+google-adk
+python-dotenv
+google-cloud-spanner
+networkx
+matplotlib
+spanner-graph-notebook
+networkx
+matplotlib
+ipysigma
+networkx
+networkx
+ipysigma
